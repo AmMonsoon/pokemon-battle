@@ -24,11 +24,14 @@ useEffect(() => {
 return(
     <div>
         <ul>
-            {data.results && data.results.map(pokemon => <li key={pokemon.name}>{pokemon.name}</li>)}
+            {data.results && data.results.map((pokemon, i) => {
+                let pokeUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i + 1}.png`;
+                return <li key={pokemon.name}> {pokemon.name}
+                <img src={pokeUrl} alt=''/> 
+                </li>
+             })}
         </ul>
     </div>
-
-    
     )
 }
 
