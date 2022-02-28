@@ -1,7 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 
-const PokemonScrapper = async () => {
+const PokemonScraper = async () => {
   const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151%27');
   const pokemon = res.data.results;
   const pokemonArr = []
@@ -19,4 +19,4 @@ const PokemonScrapper = async () => {
     else console.log(`Successful scrape! Count: ${pokemonArr.length}`)
   })
 }
-PokemonScrapper()
+PokemonScraper()
