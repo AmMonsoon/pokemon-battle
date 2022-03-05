@@ -6,7 +6,6 @@ Table users as U {
   id int [pk, increment] // auto-increment
   full_name varchar
   created_at timestamp
-  country_code int
 }
 
 Table pokemon{
