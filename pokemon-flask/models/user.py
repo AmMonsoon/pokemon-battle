@@ -3,10 +3,10 @@
 from .db import db
 
 class User(db.Model):
-    """User model."""
+    """User model class."""
 
     __tablename__ = 'users'
 
     id = db.Column(db.Integer, primary_key=True)
-    trainer_name = db.Column(db.String(50), nullable=False, unique=True)
-    
+    name = db.Column(db.String(50), nullable=False, unique=True)
+    avatar = db.Column(db.String(1000), nullable=True)
