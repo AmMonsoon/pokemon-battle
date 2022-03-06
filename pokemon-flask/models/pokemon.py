@@ -14,3 +14,6 @@ class Pokemon(db.Model):
     ability_2 = db.Column(db.String(30), nullable=False)
     type = db.Column(db.String(20), nullable=False)
     health = db.Column(db.SmallInteger, nullable=True)
+
+    user = db.relationship("User", back_populates="pokemon")
+    abilities = db.relationship("Abilities", back_populates='pokemon')
